@@ -1,6 +1,6 @@
 import React from "react";
 import './SearchComponent.css';
-import dropdown from '../../assets/icons/dropdown.svg';
+import dropdown from '../../../assets/icons/dropdown.svg';
 
 function SearchComponent() {
     return (

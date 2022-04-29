@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './components/home-page/Home';
+import Home from './ui/pages/home-page/Home';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

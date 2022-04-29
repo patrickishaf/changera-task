@@ -1,6 +1,6 @@
 import React from 'react';
-import Badge from '../badge/Badge';
-import TabUnderline from '../tab-underline/TabUnderline';
+import Badge from '../../atoms/badge/Badge';
+import TabUnderline from '../../atoms/tab-underline/TabUnderline';
 import './TabItem.css';
 
 function TabItem({iconPath, title, isSelected=false, count=123}) {

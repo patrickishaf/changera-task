@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
-import ProfileDrawer from "../profile-drawer/ProfileDrawer";
-import SearchComponent from "../search-component/SearchComponent";
+import Navbar from "../../components/navbar/Navbar";
+import ProfileDrawer from "../../components/profile-drawer/ProfileDrawer";
+import SearchComponent from "../../molecules/search-component/SearchComponent";
 import './Home.css';
 
 function Home() {

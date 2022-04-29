@@ -1,11 +1,11 @@
 import React from "react";
 import './Navbar.css';
-import bookOpen from '../../assets/icons/book-open.svg';
-import bookClosed from '../../assets/icons/book-closed.svg';
-import cube from '../../assets/icons/cube.svg';
-import star from '../../assets/icons/star.svg';
-import table from '../../assets/icons/table.svg';
-import TabItem from '../tab-item/TabItem';
+import bookOpen from '../../../assets/icons/book-open.svg';
+import bookClosed from '../../../assets/icons/book-closed.svg';
+import cube from '../../../assets/icons/cube.svg';
+import star from '../../../assets/icons/star.svg';
+import table from '../../../assets/icons/table.svg';
+import TabItem from '../../molecules/tab-item/TabItem';
 
 const tabData = [
     {
