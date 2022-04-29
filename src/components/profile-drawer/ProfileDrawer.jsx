@@ -3,7 +3,7 @@ import './ProfileDrawer.css';
 
 function ProfileDrawer() {
     return (
-        <div>PROFILE DRAWER</div>
+        <aside className='nav-drawer'>PROFILE DRAWER</aside>
     );
 }
 

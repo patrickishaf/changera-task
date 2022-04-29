@@ -8,9 +8,9 @@ function Home() {
     return (
         <div>
             <Navbar/>
-            <div>
+            <div className="page-body row">
                 <ProfileDrawer/>
-                <main>
+                <main className="main-element">
                     <SearchComponent/>
                     <div>BODY ELEMENT</div>
                 </main>

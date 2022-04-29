@@ -13,6 +13,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button {
+  border-style: solid;
+  border-color: lightgray;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 0 16px;
+  box-shadow: 0.1px 0.2px 0.2px 1px lightgray;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
