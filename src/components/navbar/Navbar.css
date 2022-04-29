@@ -1,0 +1,7 @@
+.navbar {
+    justify-content: center;
+    padding-top: 24px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--text-color-light);
+}
