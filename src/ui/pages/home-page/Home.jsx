@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import ProfileDrawer from "../../components/profile-drawer/ProfileDrawer";
 import SearchComponent from "../../molecules/search-component/SearchComponent";
 import './Home.css';
-import { repositories } from '../../../data/data';
+import { repositories, profile } from '../../../data/data';
 import RepositoryTile from "../../molecules/repository-tile/RepositoryTile";
 
 function Home() {
@@ -11,7 +11,7 @@ function Home() {
         <div>
             <Navbar/>
             <div className="page-body row">
-                <ProfileDrawer/>
+                <ProfileDrawer profile={profile}/>
                 <main className="main-element">
                     <SearchComponent/>
                     <div>

@@ -1,3 +1,71 @@
+.follow-btn {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.following-icon {
+    height: 18px;
+    width: 18px;
+}
+
+.following-summary {
+    font-size: 14px;
+    color: var(--text-color-light);
+    font-weight: 500;
+    margin-bottom: 24px;
+    margin-left: 6px;
+}
+
+.following-summary span {
+    font-weight: 700;
+    color: var(--text-color-dark);
+}
+
 .nav-drawer {
-    width: 25%;
+    width: 30%;
+    padding-left: 80px;
+    padding-right: 24px;
+    position: relative;
+    bottom: 30px;
+}
+
+.profile-bio {
+    margin-top: 16px;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    padding-top: 30px;
+}
+
+.profile-items {
+    padding-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.profile-pic {
+    height: 294px;
+    width: 294px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.profile-subheader {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.profile-username {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--text-color-dark);
+    margin-bottom: 16px;
 }

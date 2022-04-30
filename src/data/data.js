@@ -200,3 +200,15 @@ export const repositories = [
         lastUpdated: 5
     },
 ];
+
+export const profile = {
+    name: 'Peter Onum',
+    username: 'onumengine',
+    bio: 'public static void main javahead cheating with javascript',
+    followers: 23,
+    following: 47,
+    location: 'Lagos, Nigeria',
+    email: 'onumdev@gmail.com',
+    twitter: '@peteronum',
+    website: 'linktr.ee/peteronum',
+};
