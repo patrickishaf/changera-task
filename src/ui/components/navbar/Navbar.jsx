@@ -43,6 +43,7 @@ function Navbar() {
             {
                 tabData.map((tab, index) => (
                     <TabItem 
+                        key={index}
                         id={index}
                         iconPath={tab.iconPath}
                         title={tab.title}

@@ -16,8 +16,9 @@ function Home() {
                     <SearchComponent/>
                     <div>
                         {
-                            repositories.map((repo) => (
+                            repositories.map((repo, index) => (
                                 <RepositoryTile
+                                    key={index}
                                     name={repo.name}
                                     description={repo.description}
                                     lastUpdated={repo.lastUpdated}
