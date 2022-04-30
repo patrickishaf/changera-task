@@ -7,21 +7,21 @@ function SearchComponent() {
         <div className="row search-component">
             <input className="searchbar" type="text" placeholder="Find a repository..."/>
             <div className="search-comp-spacer"/>
-            <button className="dropdown-btn">
+            <button>
                 <div className="row dropdown-btn-content">
                     <p className="dropdown-btn-text">Type</p>
                     <img className="dropdown-btn-icon" src={dropdown} alt="dropdown icon" />
                 </div>
             </button>
             <div className="spacer-sm"/>
-            <button className="dropdown-btn">
+            <button>
                 <div className="row dropdown-btn-content">
                     <p className="dropdown-btn-text">Language</p>
                     <img className="dropdown-btn-icon" src={dropdown} alt="dropdown icon" />
                 </div>
             </button>
             <div className="spacer-sm"/>
-            <button className="dropdown-btn">
+            <button>
                 <div className="row dropdown-btn-content">
                     <p className="dropdown-btn-text">Sort</p>
                     <img className="dropdown-btn-icon" src={dropdown} alt="dropdown icon" />

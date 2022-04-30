@@ -1,7 +1,74 @@
+.action-dropdown-container {
+    padding-right: 8px;
+    padding-left: 2px;
+}
+
 .last-updated-text {
     font-size: 10px;
+    color: var(--text-color-light);
+    font-weight: 500;
+}
+
+.repo-action-btn {
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+    box-shadow: 0.1px 0.2px 0.2px 1px lightgray;
+}
+
+.repo-action-btn-content {
+    justify-content: space-between;
+    border-style: solid;
+    border-color: transparent;
+    border-right-color: lightgray;
+    border-right-width: 2px;
+    padding: 2px 8px;
+}
+
+.repo-action-btn-text {
+    font-size: 10px;
+    color: var(--text-color-dark);
+    font-weight: 500;
+    padding-left: 4px;
+}
+
+.repo-actions {
+    align-items: flex-end;
+}
+
+.repo-description {
+    font-size: 14px;
+    color: var(--text-color-light);
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.repo-extra-data {
+    align-items: center;
+}
+
+.repo-extra-data>* {
+    margin-right: 24px;
+}
+
+.repo-name {
+    color: var(--text-color-dark);
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .repo-tile {
     justify-content: space-between;
+    border-top-style: solid;
+    border-top-color: lightgray;
+    border-top-width: 1px;
+    padding: 30px 0;
+}
+
+.repo-title {
+    margin-bottom: 12px;
 }

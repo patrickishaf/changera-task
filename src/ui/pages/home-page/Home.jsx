@@ -3,6 +3,8 @@ import Navbar from "../../components/navbar/Navbar";
 import ProfileDrawer from "../../components/profile-drawer/ProfileDrawer";
 import SearchComponent from "../../molecules/search-component/SearchComponent";
 import './Home.css';
+import { repositories } from '../../../data/data';
+import RepositoryTile from "../../molecules/repository-tile/RepositoryTile";
 
 function Home() {
     return (
@@ -12,7 +14,19 @@ function Home() {
                 <ProfileDrawer/>
                 <main className="main-element">
                     <SearchComponent/>
-                    <div>BODY ELEMENT</div>
+                    <div>
+                        {
+                            repositories.map((repo) => (
+                                <RepositoryTile
+                                    name={repo.name}
+                                    description={repo.description}
+                                    lastUpdated={repo.lastUpdated}
+                                    privacy={repo.privacy}
+                                    numberOfStars={1}
+                                />
+                            ))
+                        }
+                    </div>
                 </main>
             </div>
         </div>

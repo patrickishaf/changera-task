@@ -4,9 +4,9 @@ import star from '../../../assets/icons/star.svg';
 
 function StarTile({ count }) {
     return (
-        <div className="row">
+        <div className="row star-tile">
             <img className="star-icon" src={star} alt="number of stars" />
-            <p>{count}</p>
+            <p className="star-count">{count}</p>
         </div>
     )
 }

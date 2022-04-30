@@ -1,4 +1,14 @@
+.star-count {
+    font-size: 12px;
+    color: var(--text-color-light);
+    font-weight: 500;
+}
+
 .star-icon {
-    height: 10px;
-    width: 10px;
+    height: 14px;
+    width: 14px;
+}
+
+.star-tile {
+    align-items: center;
 }

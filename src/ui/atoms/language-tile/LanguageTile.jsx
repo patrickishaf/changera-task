@@ -3,9 +3,9 @@ import './LanguageTile.css';
 
 function LanguageTile({ name }) {
     return (
-        <div className="row">
-            <div className="language-color"/>
-            <p>{name}</p>
+        <div className="lang-tile row">
+            <div className="lang-color"/>
+            <p className="lang-name">{name}</p>
         </div>
     );
 }

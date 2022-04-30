@@ -1,7 +1,19 @@
-.language-color {
+.lang-color {
     height: 10px;
     width: 10px;
     border-radius: 50%;
     background-color: cadetblue;
     padding-right: 4px;
+}
+
+.lang-tile {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-name {
+    font-size: 12px;
+    padding-left: 4px;
+    color: var(--text-color-light);
+    font-weight: 500;
 }
