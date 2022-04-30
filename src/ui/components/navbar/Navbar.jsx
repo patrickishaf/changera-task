@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './Navbar.css';
 import bookOpen from '../../../assets/icons/book-open.svg';
 import bookClosed from '../../../assets/icons/book-closed.svg';
@@ -31,10 +31,25 @@ const tabData = [
 ]
 
 function Navbar() {
+    const [selectedTab, setSelectedTab] = useState(0);
+
+    const handleClick = (index) => {
+        console.log('clicked the handleclick function')
+        setSelectedTab(index);
+    }
+
     return (
         <div className="navbar row">
             {
-                tabData.map(tab => (<TabItem iconPath={tab.iconPath} title={tab.title}/>))
+                tabData.map((tab, index) => (
+                    <TabItem 
+                        id={index}
+                        iconPath={tab.iconPath}
+                        title={tab.title}
+                        isSelected={(index === selectedTab ? true : false)}
+                        handleClick={handleClick}
+                    />
+                ))
             }
         </div>
     );
