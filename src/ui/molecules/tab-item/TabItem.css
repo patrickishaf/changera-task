@@ -7,6 +7,10 @@
     width: 20px;
 }
 
+.tab-item:hover {
+    cursor: pointer;
+}
+
 .tab-item-content {
     align-items: flex-end;
     padding: 20px;
