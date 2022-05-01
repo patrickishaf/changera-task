@@ -10,10 +10,10 @@ import ProfileItem from '../../atoms/profile-element/ProfileItem';
 function ProfileDrawer({ profile }) {
     return (
         <aside className='nav-drawer column'>
-            <img className='profile-pic' src={avatar} alt="github profile avatar" />
+            <img className='profile-pic' src={profile.avatar_url ?? avatar} alt="github profile avatar" />
             <div className="column profile-details">
                 <p className='profile-name'>{profile.name}</p>
-                <p className='profile-username'>{profile.username}</p>
+                <p className='profile-username'>{profile.username ?? 'patrickishaf'}</p>
                 <button className='follow-btn'>Follow</button>
                 <p className='profile-bio'>{profile.bio}</p>
                 <div className="following row">
@@ -24,8 +24,8 @@ function ProfileDrawer({ profile }) {
                 </div>
                 <div className='profile-items'>
                     <ProfileItem iconPath={location} title={profile.location}/>
-                    <ProfileItem iconPath={mail} title={profile.email}/>
-                    <ProfileItem iconPath={twitter} title={profile.twitter}/>
+                    <ProfileItem iconPath={mail} title={profile.email ?? 'patrickishaf@gmail.com'}/>
+                    <ProfileItem iconPath={twitter} title={profile.twitter_username ??  '@peteronum'}/>
                 </div>
                 {/* {<p className='profile-subheader'>Achievements</p>} */}
             </div>

@@ -3,27 +3,36 @@ import Navbar from "../../components/navbar/Navbar";
 import ProfileDrawer from "../../components/profile-drawer/ProfileDrawer";
 import SearchComponent from "../../molecules/search-component/SearchComponent";
 import './Home.css';
-import { repositories, profile } from '../../../data/data';
+import { repositories, defaultProfile } from '../../../data/data';
 import RepositoryTile from "../../molecules/repository-tile/RepositoryTile";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProfile } from '../../../redux/profile/profile-slice';
+import { fetchProfile } from '../../../redux/slices/profile-slice';
+import { useGetProfileQuery } from "../../../services/api-service";
 
 function Home() {
     const dispatch = useDispatch();
-    const profile = useSelector((state) => state.profile);
+    const userProfile = useSelector((state) => state.profile);
+    console.log('THE CURRENT PROFILE IN THE HOME COMPONENT IS: ', userProfile);
+    const { data, error, isLoading} = useGetProfileQuery('patrickishaf');
 
     useEffect(() => {
-        getProfile();
+        getProfile(defaultProfile);
     }, []);
 
-    const getProfile = () => {
-        dispatch(fetchProfile());
+    useEffect(() => {
+        console.log('THE USER PROFILE AFTER FETCHING IS: ', userProfile);
+        console.log('THE USER PROFILE IS NOW ', data);
+        getProfile(data);
+    }, [userProfile, data]);
+
+    const getProfile = (newProfile) => {
+        dispatch(fetchProfile(newProfile));
     }
     return (
         <div>
             <Navbar/>
             <div className="page-body row">
-                <ProfileDrawer profile={profile}/>
+                <ProfileDrawer profile={userProfile}/>
                 <main onClick={() => dispatch(getProfile())} className="main-element">
                     <SearchComponent/>
                     <div>

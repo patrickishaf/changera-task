@@ -1,4 +1,4 @@
-const defunktProfile = {
+export const defunktProfile = {
     "login": "defunkt",
     "id": 2,
     "node_id": "MDQ6VXNlcjI=",
@@ -32,3 +32,38 @@ const defunktProfile = {
     "created_at": "2007-10-20T05:24:19Z",
     "updated_at": "2022-03-29T01:48:36Z"
 };
+
+export const fetchedProfile = {
+    avatar_url: "https://avatars.githubusercontent.com/u/2?v=4",
+    bio: "🍔",
+    blog: "http://chriswanstrath.com/",
+    company: null,
+    created_at: "2007-10-20T05:24:19Z",
+    email: null,
+    events_url: "https://api.github.com/users/defunkt/events{/privacy}",
+    followers: 21402,
+    followers_url: "https://api.github.com/users/defunkt/followers",
+    following: 210,
+    following_url: "https://api.github.com/users/defunkt/following{/other_user}",
+    gists_url: "https://api.github.com/users/defunkt/gists{/gist_id}",
+    gravatar_id: "",
+    hireable: null,
+    html_url: "https://github.com/defunkt",
+    id: 2,
+    location: null,
+    login: "defunkt",
+    name: "Chris Wanstrath",
+    node_id: "MDQ6VXNlcjI=",
+    organizations_url: "https://api.github.com/users/defunkt/orgs",
+    public_gists: 273,
+    public_repos: 107,
+    received_events_url: "https://api.github.com/users/defunkt/received_events",
+    repos_url: "https://api.github.com/users/defunkt/repos",
+    site_admin: false,
+    starred_url: "https://api.github.com/users/defunkt/starred{/owner}{/repo}",
+    subscriptions_url: "https://api.github.com/users/defunkt/subscriptions",
+    twitter_username: null,
+    type: "User",
+    updated_at: "2022-03-29T01:48:36Z",
+    url: "https://api.github.com/users/defunkt",
+}

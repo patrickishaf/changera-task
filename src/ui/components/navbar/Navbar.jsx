@@ -6,6 +6,7 @@ import cube from '../../../assets/icons/cube.svg';
 import star from '../../../assets/icons/star.svg';
 import table from '../../../assets/icons/table.svg';
 import TabItem from '../../molecules/tab-item/TabItem';
+import { useSelector } from "react-redux";
 
 const tabData = [
     {
@@ -32,9 +33,9 @@ const tabData = [
 
 function Navbar() {
     const [selectedTab, setSelectedTab] = useState(0);
+    const numberOfRepos = useSelector((state) => state.profile.public_repos);
 
     const handleClick = (index) => {
-        console.log('clicked the handleclick function')
         setSelectedTab(index);
     }
 
@@ -49,6 +50,7 @@ function Navbar() {
                         title={tab.title}
                         isSelected={(index === selectedTab ? true : false)}
                         handleClick={handleClick}
+                        count={numberOfRepos}
                     />
                 ))
             }

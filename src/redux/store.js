@@ -1,10 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
-import profileReducer from './profile/profile-slice';
-import reposReducer from './repos/repos-slice';
+import profileReducer from './slices/profile-slice';
+import reposReducer from './slices/repos-slice';
+import { githubApi } from "../services/api-service";
+import { setupListeners } from "@reduxjs/toolkit/dist/query";
 
-export default configureStore({
+const store = configureStore({
     reducer: {
         repos: reposReducer,
         profile: profileReducer,
+        [githubApi.reducerPath]: githubApi.reducer,
     },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(githubApi.middleware),
 });
+
+setupListeners(store.dispatch);
+
+export default store;
