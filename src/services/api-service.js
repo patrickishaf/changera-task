@@ -17,7 +17,12 @@ export const githubApi = createApi({
             }
         }),
         getProfile: builder.query({
-            query: (username) => `users/${username}`
+            query: (username) => {
+                return {
+                    url: `users/${username}`,
+                    method: 'GET',
+                }
+            }
         }),
         getRepositories: builder.query({
             query: (username) => `users/${username}/repos`

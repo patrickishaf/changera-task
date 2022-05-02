@@ -12,13 +12,13 @@ function RepositoryTile(props) {
             <div className="repo-info">
                 <div className="repo-title row">
                     <p className="repo-name">{props.name}</p>
-                    <PrivacyChip value={props.privacy}/>
+                    <PrivacyChip value={props.private === true ? 'Private' : 'Public'}/>
                 </div>
                 <p className="repo-description">{props.description}</p>
                 <div className="row repo-extra-data">
-                    <LanguageTile name="Python"/>
-                    <StarTile count={props.numberOfStars}/>
-                    <p className="last-updated-text">Updated {props.lastUpdated} days ago</p>
+                    <LanguageTile name={props.language ?? 'forked'}/>
+                    <StarTile count={props.stargazers_count}/>
+                    <p className="last-updated-text">Last updated at {props.updated_at}</p>
                 </div>
             </div>
             <div className="column repo-actions">

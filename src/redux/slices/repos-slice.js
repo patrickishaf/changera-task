@@ -1,18 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { defunktRepositories } from '../../data/github';
+
+// console.log('THE REPOSITORIES IN THE REPOS SLICE ARE: ', defunktRepositories);
 
 export const reposSlice = createSlice({
-    name: 'repositories',
-    initialState: {},
+    name: 'repos',
+    initialState: defunktRepositories,
     reducers: {
-        fetchRepos: (repos, action) => {
-            return repos;
+        fetchRepos: (state, action) => {
+            return state;
         },
-        updateRepos: (repos, action) => {
-            return repos;
+        updateRepos: (state, action) => {
+            // console.log('THE ACTION IN REPOS SLICE IS: ', action);
+            // console.log('THE REPOS IN REPOS SLICE ARE ', action.payload);
+            return action.payload;
         },
-        filterRepos: (repos, action) => {
-            return repos;
-        }
+        filterRepos: (state, action) => {
+            return state;
+        },
     }
 });
 

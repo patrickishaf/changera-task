@@ -23,6 +23,10 @@ button {
   background-color: #FAFAFA;
 }
 
+center {
+  height: 1vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
