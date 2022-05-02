@@ -4,18 +4,6 @@ export const githubApi = createApi({
     reducerPath: 'githubApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'https://api.github.com/'}),
     endpoints: (builder) => ({
-        authorizeUser: builder.query({
-            query: () => 'login/oauth/authorize'
-        }),
-        getAccessToken: builder.query({
-            query: (body) => {
-                return ({
-                    url: 'login/oauth/access_token',
-                    method: 'POST',
-                    body: body,
-                })
-            }
-        }),
         getProfile: builder.query({
             query: (username) => {
                 return {

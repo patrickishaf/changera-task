@@ -3,12 +3,12 @@ import Navbar from "../../components/navbar/Navbar";
 import ProfileDrawer from "../../components/profile-drawer/ProfileDrawer";
 import SearchComponent from "../../molecules/search-component/SearchComponent";
 import './Home.css';
-import { repositories } from '../../../data/data';
 import RepositoryTile from "../../molecules/repository-tile/RepositoryTile";
 import { useDispatch, useSelector } from 'react-redux';
 import { updateProfile } from '../../../redux/slices/profile-slice';
 import { updateRepos, fetchRepos } from "../../../redux/slices/repos-slice";
-import { useGetProfileQuery, useGetRepositoriesQuery, useGetUserProfileQuery } from "../../../services/api-service";
+import { useGetProfileQuery, useGetRepositoriesQuery } from "../../../services/api-service";
+import { useRequestAuthQuery } from "../../../services/auth-api-service";
 
 function Home() {
     const { data: profileData, error: profileError, isLoading: isLoadingProfile} = useGetProfileQuery('patrickishaf');
@@ -16,7 +16,13 @@ function Home() {
     // console.log('ERROR: ', profileError);
     // console.log('ISLOADING ', isLoadingProfile);
     const { data: repositoryData, error: repositoryError, isLoading: isLoadingRepositories } = useGetRepositoriesQuery('onumengine');
-    const { data: authData, error: authError, isLoading: isLoadingAuth } = useGetUserProfileQuery();
+    const queryObject = {
+        redirectUri: '127.0.0.1:3000/redirect',
+        state: 'randomstatestring',
+        login: 'onumengine',
+        allowSignup: 'true',
+    };
+    const { data: authData, error: authError, isLoading: isLoadingAuth } = useRequestAuthQuery(queryObject);
     console.log('AUTH DATA: ', authData);
     console.log('AUTH ERROR: ', authError);
     console.log('IS_LOADING AUTH ', isLoadingAuth);
