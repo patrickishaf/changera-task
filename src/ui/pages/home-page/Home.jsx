@@ -15,7 +15,7 @@ function Home() {
     // console.log('PROFILE DATA: ', profileData);
     // console.log('ERROR: ', profileError);
     // console.log('ISLOADING ', isLoadingProfile);
-    const { data: repositoryData, error: repositoryError, isLoading: isLoadingRepositories } = useGetRepositoriesQuery('onumengine');
+    const { data: repositoryData, error: repositoryError, isLoading: isLoadingRepositories } = useGetRepositoriesQuery('patrickishaf');
     const queryObject = {
         redirectUri: '127.0.0.1:3000/redirect',
         state: 'randomstatestring',
